@@ -14,24 +14,6 @@ namespace MW.Application
       }
       
       public static string ErrorPage => @"/Home/Error";
-           
-      #region SSO
-
-      public static string SSOLoginURL => "api/token/get";
-      public static string SSOCreatUserURL => "api/access/create";
-      public static string SSOSetProfilePassword => "api/access/newpassword";
-      public static string SSOUserInfoURL => "api/access/getuserinfo";
-      public static string SSOGetTokenURL => "api/token/get";
-      public static string SSOPasswordRecoveryURL => "api/access/passwordrecovery";
-      public static string SSOSetPasswordURL => "api/access/setpassword";
-      public static string SSOChangePasswordURL => "api/access/changepassword";
-
-      #endregion
-           
-      #region Constant Link
-
-      public static string SSOBaseURL => "AppSettingLinks:SSOLink";
-
-      #endregion
+         
    }
 }
