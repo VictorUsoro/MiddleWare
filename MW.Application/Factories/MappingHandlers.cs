@@ -2,6 +2,7 @@
 {
    public class MappingHandlers : IMappingHandlers
    {
-      public UserProfileFactory UserProfileFactory => new UserProfileFactory();
+      public CustomerFactory UserProfileFactory => new CustomerFactory();
+      public AgentFactory AgentFactory => new AgentFactory();
    }
 }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace MW.Services
 {
-   public class UserProfileServices : BaseServices<Customer, CustomerModel>
+   public class CustomerServices : BaseServices<Customer, CustomerModel>
    {
-      public UserProfileServices(MiddleWareDBContext context) : base(context) { }
+      public CustomerServices(MiddleWareDBContext context) : base(context) { }
 
       public DateTime? ConvertDateTime(string data)
       {

@@ -1,9 +1,11 @@
 using MW.Application;
+using MW.Application.Domain;
 
 namespace MW.Services
 {
    public interface IUnitOfWork
    {
-      IRepository<Customer> UserProfileRepository { get; }
+      IRepository<Customer> CustomerRepository { get; }
+      IRepository<Agent> AgentRepository { get; }
    }
 }

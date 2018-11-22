@@ -2,6 +2,7 @@
 {
    public interface IMappingHandlers
    {
-      UserProfileFactory UserProfileFactory { get; }
+      CustomerFactory UserProfileFactory { get; }
+      AgentFactory AgentFactory { get; }
    }
 }

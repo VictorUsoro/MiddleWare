@@ -1,4 +1,5 @@
 using MW.Application;
+using MW.Application.Domain;
 
 namespace MW.Services
 {
@@ -10,6 +11,7 @@ namespace MW.Services
          _context = context;
       }
 
-      public IRepository<Customer> UserProfileRepository => new Repository<Customer>(_context);
+      public IRepository<Customer> CustomerRepository => new Repository<Customer>(_context);
+      public IRepository<Agent> AgentRepository => new Repository<Agent>(_context);
    }
 }

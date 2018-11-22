@@ -2,6 +2,7 @@ namespace MW.Services
 {
    public interface IServiceInit
    {
-      UserProfileServices UserProfileServices { get; }
+      CustomerServices CustomerServices { get; }
+      AgentServices AgentServices { get; }
    }
 }

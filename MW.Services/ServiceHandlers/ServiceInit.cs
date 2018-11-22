@@ -8,7 +8,10 @@ namespace MW.Services
          _context = context;
       }
       
-      public UserProfileServices UserProfileServices => new UserProfileServices(_context);
+      public CustomerServices CustomerServices => new CustomerServices(_context);
+      public AgentServices AgentServices => new AgentServices(_context);
+
+
       public UnitOfWork UnitOfWork => new UnitOfWork(_context);
    }
 }
