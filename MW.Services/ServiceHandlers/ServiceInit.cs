@@ -1,5 +1,3 @@
-using ch.services.OtherServices;
-
 namespace MW.Services
 {
    public class ServiceInit : IServiceInit
