@@ -18,13 +18,6 @@ namespace MW.Application
       public static string SerializeJson(object input)
       {
          return JsonConvert.SerializeObject(input);
-      }
-
-      public static int MessageUnitCost(string Message, int ProfileCount)
-      {
-         int msgpagecount = Message.Length / 160;
-         if (Message.Length % 160 > 0) msgpagecount += 1;
-         return msgpagecount * ProfileCount;
-      }
+      }      
    }
 }
