@@ -1,4 +1,4 @@
 ﻿namespace MW.Application
 {
-   public class UserProfileFactory : BaseMapper<UserProfile, UserProfileModel> { }
+   public class UserProfileFactory : BaseMapper<Customer, CustomerModel> { }
 }

@@ -6,7 +6,7 @@ namespace MW.Application
    {
       public static void RegisterMappings()
       {
-         TypeAdapterConfig<UserProfile, UserProfileModel>.NewConfig().IgnoreNullValues(true);
+         TypeAdapterConfig<Customer, CustomerModel>.NewConfig().IgnoreNullValues(true);
       }
    }
 }

@@ -10,6 +10,6 @@ namespace MW.Services
          _context = context;
       }
 
-      public IRepository<UserProfile> UserProfileRepository => new Repository<UserProfile>(_context);
+      public IRepository<Customer> UserProfileRepository => new Repository<Customer>(_context);
    }
 }

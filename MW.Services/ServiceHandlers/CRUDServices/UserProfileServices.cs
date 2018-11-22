@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MW.Services
 {
-   public class UserProfileServices : BaseServices<UserProfile, UserProfileModel>
+   public class UserProfileServices : BaseServices<Customer, CustomerModel>
    {
       public UserProfileServices(MiddleWareDBContext context) : base(context) { }
 

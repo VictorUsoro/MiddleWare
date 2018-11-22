@@ -4,6 +4,6 @@ namespace MW.Services
 {
    public interface IUnitOfWork
    {
-      IRepository<UserProfile> UserProfileRepository { get; }
+      IRepository<Customer> UserProfileRepository { get; }
    }
 }

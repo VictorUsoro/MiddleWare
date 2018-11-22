@@ -11,6 +11,6 @@ namespace MW.Services
 
       public MiddleWareDBContext(DbContextOptions<MiddleWareDBContext> options) : base(options) { }
             
-      public virtual DbSet<UserProfile> UserProfiles { get; set; }
+      public virtual DbSet<Customer> UserProfiles { get; set; }
    }
 }
