@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using MW.Application;
 using MW.Services;
 
+[EnableCors("*")]
 public class BaseController : Controller
 {
     public readonly IServiceInit _services;

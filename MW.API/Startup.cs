@@ -41,17 +41,18 @@ namespace MW.API
                 options.MinimumSameSitePolicy = SameSiteMode.Strict;
             });
             services.AddResponseCompression(options =>
-            {
-                options.MimeTypes = new[]
                 {
-                "application/xml",
-                "application/json",
-                "text/json",
-                "image/svg+xml"
-            };
-            options.EnableForHttps = true;
-         });
-
+                    options.MimeTypes = new[]
+                    {
+                    "application/xml",
+                    "application/json",
+                    "text/json",
+                    "image/svg+xml"
+                };
+                options.EnableForHttps = true;
+            });
+            
+            services.AddSwaggerGen();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -67,8 +68,14 @@ namespace MW.API
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+            
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.Use(async (context, next) =>
