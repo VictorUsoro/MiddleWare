@@ -19,6 +19,7 @@ namespace MW.API
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel((p) => p.AddServerHeader = false)
                 .UseStartup<Startup>();
     }
 }

@@ -15,7 +15,7 @@ namespace MW.API.Controllers
             return View();
         }
 
-        [Route("Error")]
+        [Route("error")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
