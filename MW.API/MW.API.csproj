@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TieredCompilation>true</TieredCompilation>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,4 +10,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>
 
+ <ItemGroup>
+    <ProjectReference Include="..\MW.Application\MW.Application.csproj" />
+    <ProjectReference Include="..\MW.Services\MW.Services.csproj" />
+  </ItemGroup>
 </Project>
