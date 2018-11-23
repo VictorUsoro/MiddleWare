@@ -89,8 +89,18 @@ namespace MW.API
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=LandingPage}/{action=Index}/{id?}");
             });
+            UpdateDatabase(app);
+        }
+
+        private void UpdateDatabase(IApplicationBuilder app)
+        {
+            using (var serviceScope = app.ApplicationServices.CreateScope())
+            {
+                var dbContext = serviceScope.ServiceProvider.GetRequiredService<MiddleWareDBContext>();
+                dbContext.Database.Migrate();
+            }
         }
     }
 }
