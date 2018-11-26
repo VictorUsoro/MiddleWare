@@ -13,7 +13,7 @@ namespace MW.Application
          }
       }
       
-      public static string ErrorPage => @"/Home/Error";
+      public static string ErrorPage => @"/LandingPage/FailRequest";
 
       public static string ConnectionString => "Host=localhost;Database=middlewaredb;Username=postgres;Password=adminp";
          

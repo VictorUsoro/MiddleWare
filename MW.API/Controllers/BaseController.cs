@@ -1,5 +1,7 @@
+using System.Linq;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using MW.Application;
 using MW.Services;
 
@@ -30,5 +32,17 @@ public class BaseController : Controller
       }
 
       #endregion
+
+      #region Validation Message
+
+      public string validationErrorMessage(ModelStateDictionary model)
+      {
+         var message = string.Join(",", model.Values.SelectMany(x => x.Errors).Select(err => err.ErrorMessage))
+            .Replace("field", string.Empty)
+            .Replace("The", string.Empty);
+         return message;
+      }
+
+      #endregion 
 
 }
